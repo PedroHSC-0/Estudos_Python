@@ -51,7 +51,4 @@ tamanho, n_minas = input_dados()
 
 campo  = gerar_campo(tamanho, n_minas)
 
-
-
-
 print(campo)
