@@ -101,7 +101,7 @@ def mostrar_campo(campo):
         linha_str = "".join(f"| {coordenada} " for coordenada in linha) + "|"
         print(linha_str.center(largura_terminal))
 
-#Leitura e tratamento da entrada de dados das coordenadas
+# Função para leitura e tratamento da entrada de dados das coordenadas
 def ler_coordenadas():
 
     while(True):
@@ -114,7 +114,9 @@ def ler_coordenadas():
         else:
             aviso("Insira uma coordenada válida, Ex: 5, 6")
 
+# Função para verificar e marcar o redor da coordenada aberta pelo jogador
 def verificar_redor(campo):
+    print()
 
 # Função que inicia e executa o jogo
 def iniciar_jogo(campo, coordenadas_minas):
