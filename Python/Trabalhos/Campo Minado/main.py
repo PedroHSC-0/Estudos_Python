@@ -1,11 +1,12 @@
-from funcoes import aviso, perdeu, venceu, input_dados, gerar_campo, iniciar_jogo
+from funcoes import aviso, perdeu, venceu, input_dados, gerar_campo, jogar
 
-tamanho, n_minas = input_dados()
-
-campo, coodenadas_minas = gerar_campo(tamanho, n_minas)
 
 while(True):
-    resultado = iniciar_jogo(campo, coodenadas_minas)
+    tamanho, n_minas = input_dados()
+
+    campo, coodenadas_minas = gerar_campo(tamanho, n_minas)
+
+    resultado = jogar(campo, coodenadas_minas)
 
     if resultado:
         venceu()
@@ -13,7 +14,7 @@ while(True):
         perdeu()  
 
     try:
-        opcao = int(input("Deseja jogar novamente? (0 -> Não | 1 -> Sim)"))
+        opcao = int(input("Deseja jogar novamente(0 -> Não | 1 -> Sim)?"))
 
     except:
         opcao = 0
